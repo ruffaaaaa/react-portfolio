@@ -47,7 +47,7 @@ function Header() {
         <div className="max-w-6xl mx-auto">
           <h1 className="font-jersey font-extrabold text-[28px] lg:text-[90px] lg:mt-[4rem] mt-16">
             Hi, I'm{" "}
-            <span className="pl-2 uppercase underline text-[#3D9DC7]">
+            <span className="pl-1 uppercase underline text-[#3D9DC7]">
               {text}
               <span className="blinking-cursor">|</span>
             </span>
