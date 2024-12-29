@@ -16,7 +16,7 @@ function Project() {
       description:
         "Another project description goes here. This is a placeholder for the second project.",
       tools: ["Node.js", "Express", "MongoDB"],
-      image: "/src/images/project/facilities-reservation.png",
+      image: "./images/project/facilities-reservation.png",
       link: "https://github.com/yourusername/project2",
     },
   ];
