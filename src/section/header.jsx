@@ -33,9 +33,9 @@ function Header() {
   return (
     <>
       <header
-        className="header text-white py-[17.5rem] px-6 text-center animate-background fade-in"
+        className="header text-white pt-[17rem] pb-[12rem] px-6 text-center animate-background fade-in"
         style={{
-          backgroundImage: "url('/images/bg-header.png')",
+          backgroundImage: "url('/images/bg-header.png')", // Ensure this path is correct
           backgroundSize: "cover",
           backgroundPosition: "center",
           marginTop: "-4rem",
@@ -82,7 +82,7 @@ function Header() {
           }
         }
 
-        /* Background animation */
+        /* Background image animation */
         @keyframes background-animation {
           0% {
             background-position: 0% 0%;
@@ -97,6 +97,7 @@ function Header() {
 
         .animate-background {
           animation: background-animation 20s ease infinite;
+          background-size: 120% 120%; /* This will scale the background image to make it move */
         }
 
         /* Fade-in effect */

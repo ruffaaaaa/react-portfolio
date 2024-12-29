@@ -51,7 +51,7 @@ function Project() {
 
   return (
     <div id="project">
-      <div className="pt-24 pb-12 bg-gray-900">
+      <div className="pt-24 pb-12">
         <div className="items-center justify-center text-center mb-12">
           <h1
             className={`font-jersey text-[#3D9DC7] text-3xl uppercase lg:text-5xl animate-fade-in mb-8 ${
