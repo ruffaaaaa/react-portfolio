@@ -101,7 +101,7 @@ function GetInTouch() {
                     </p>
                   )}
                 </div>
-                <div className="lg:mb-4">
+                <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700">
                     Email
                   </label>
