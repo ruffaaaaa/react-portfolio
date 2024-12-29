@@ -5,7 +5,7 @@ function Sidepanel() {
 
   return (
     <div
-      className={`fixed top-1/3 left-0 z-50 flex flex-col transition-all duration-300 ${
+      className={`fixed top-[16rem] lg:top-1/3 left-0 z-50 flex flex-col transition-all duration-300 ${
         isHovered ? "w-[3.5rem]" : "w-3"
       } bg-gradient-to-b from-[#53368A] to-[#CA60B8] rounded-r-lg shadow-md`}
       onMouseEnter={() => setIsHovered(true)}

@@ -33,18 +33,19 @@ function Header() {
   return (
     <>
       <header
-        className="header text-white pt-[17rem] pb-[12rem] px-6 text-center animate-background fade-in"
+        className="header text-white pt-[17.5rem] pb-[17rem] px-6 justify-center text-center animate-background"
         style={{
-          backgroundImage: "url('/images/bg-header.png')", // Ensure this path is correct
+          backgroundImage: "url('/images/bg-header.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           marginTop: "-4rem",
+          height: "100vh",
         }}
         id="home"
       >
-        <div className="max-w-5xl mx-auto">
-          {/* Title with Typing Effect */}
-          <h1 className="font-jersey font-extrabold text-3xl lg:text-[90px] lg:mt-[4rem] mt-16 scale-up">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="font-jersey font-extrabold text-4xl lg:text-[90px] lg:mt-[4rem] mt-16">
             Hi, I'm{" "}
             <span className="pl-2 uppercase underline text-[#3D9DC7]">
               {text}
@@ -60,7 +61,7 @@ function Header() {
 
           <a
             href="#get-in-touch"
-            className="bg-gradient-to-r from-[#53368A] to-[#CA60B8] text-[15px] lg:text-[20px] text-white uppercase font-bold py-3 px-8 rounded-2xl shadow-lg font-jersey transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-[#53368A] to-[#CA60B8] text-[15px] lg:text-[25px] text-xl text-white uppercase  py-3 px-8 rounded-2xl shadow-lg font-jersey transition-all duration-300 hover:scale-105"
           >
             GET IN TOUCH→
           </a>
@@ -82,50 +83,22 @@ function Header() {
           }
         }
 
-        /* Background image animation */
+        /* Horizontal background animation */
         @keyframes background-animation {
           0% {
-            background-position: 0% 0%;
+            background-position: 0% 60%;
           }
           50% {
-            background-position: 100% 100%;
+            background-position: 100% 50%;
           }
           100% {
-            background-position: 0% 0%;
+            background-position: 0% 50%;
           }
         }
 
         .animate-background {
           animation: background-animation 20s ease infinite;
-          background-size: 120% 120%; /* This will scale the background image to make it move */
-        }
-
-        /* Fade-in effect */
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        .fade-in {
-          animation: fadeIn 2s ease-out;
-        }
-
-        /* Scale effect for title */
-        @keyframes scaleUp {
-          0% {
-            transform: scale(0.9);
-          }
-          100% {
-            transform: scale(1);
-          }
-        }
-
-        .scale-up {
-          animation: scaleUp 1s ease-out;
+          background-size: 120% 120%; /* Scale the background to make movement visible */
         }
       `}</style>
     </>

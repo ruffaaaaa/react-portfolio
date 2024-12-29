@@ -7,17 +7,19 @@ function Project() {
       title: "Project 1",
       description:
         "Lorem ipsum odor amet, consectetuer adipiscing elit. Velit aliquet urna tincidunt; nunc bibendum eget ac. Erat convallis viverra; nullam habitant consequat tempor euismod aliquam.",
-      tools: ["React", "JavaScript", "CSS", "HTML"],
-      image: "/images/project/its-more-fun.png",
-      link: "https://github.com/yourusername/project1",
+      tools: ["Laravel", "HTML", "CSS", "JS", "TailwindCSS"],
+      image: "/images/project/3.png",
+      titleButton: "View Website →",
+      link: "https://gso-booking.lsu-ccsea.cloud/",
     },
     {
-      title: "Project 2",
+      title: "Pokemon Card",
       description:
-        "Another project description goes here. This is a placeholder for the second project.",
-      tools: ["Node.js", "Express", "MongoDB"],
-      image: "/images/project/facilities-reservation.png",
-      link: "https://github.com/yourusername/project2",
+        "Lorem ipsum odor amet, consectetuer adipiscing elit. Velit aliquet urna tincidunt; nunc bibendum eget ac. Erat convallis viverra; nullam habitant consequat tempor euismod aliquam.",
+      tools: ["HTML", "CSS", "JS", "RestfulAPI"],
+      image: "/images/project/4.png",
+      titleButton: "View Source Code →",
+      link: "https://gso-booking.lsu-ccsea.cloud/",
     },
   ];
 
@@ -34,7 +36,7 @@ function Project() {
         }
       },
       {
-        threshold: 0.5, // Trigger animation when 50% of the section is in view
+        threshold: 0.5,
       }
     );
 
@@ -51,7 +53,7 @@ function Project() {
 
   return (
     <div id="project">
-      <div className="pt-24 pb-12">
+      <div className="pt-24">
         <div className="items-center justify-center text-center mb-12">
           <h1
             className={`font-jersey text-[#3D9DC7] text-3xl uppercase lg:text-5xl animate-fade-in mb-8 ${
@@ -102,7 +104,7 @@ function Project() {
                 >
                   <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
                   <p className="text-gray-300 mb-4">{project.description}</p>
-                  <div className="flex items-center flex-wrap space-x-4 mb-4">
+                  <div className="flex items-center flex-wrap space-x-2 mb-4">
                     <span className="text-sm font-semibold text-gray-400 uppercase">
                       Tools Used:
                     </span>
@@ -121,7 +123,7 @@ function Project() {
                     rel="noopener noreferrer"
                   >
                     <button className="bg-gradient-to-r from-[#53368A] to-[#3D9DC7] uppercase hover:bg-purple-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transform hover:scale-105 transition duration-300">
-                      View Source Code →
+                      {project.titleButton}
                     </button>
                   </a>
                 </div>

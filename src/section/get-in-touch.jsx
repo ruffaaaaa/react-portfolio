@@ -10,7 +10,8 @@ function GetInTouch() {
     user_message: "",
   });
   const [errors, setErrors] = useState({});
-  const [recaptchaValue, setRecaptchaValue] = useState(null); // State to store reCAPTCHA value
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const [showRecaptcha, setShowRecaptcha] = useState(false); // State to manage reCAPTCHA visibility
 
   const validate = () => {
     const errors = {};
@@ -30,8 +31,12 @@ function GetInTouch() {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleFocus = () => {
+    setShowRecaptcha(true); // Show reCAPTCHA on input focus
+  };
+
   const handleRecaptchaChange = (value) => {
-    setRecaptchaValue(value); // Store reCAPTCHA response
+    setRecaptchaValue(value);
   };
 
   const sendEmail = (e) => {
@@ -51,8 +56,9 @@ function GetInTouch() {
           console.log("SUCCESS!");
           alert("Your message has been sent successfully!");
           setFormData({ user_name: "", user_email: "", user_message: "" });
-          setRecaptchaValue(null); // Reset reCAPTCHA value after successful submission
+          setRecaptchaValue(null);
           setErrors({});
+          setShowRecaptcha(false); // Hide reCAPTCHA after successful submission
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -87,6 +93,7 @@ function GetInTouch() {
                     placeholder="Your Name"
                     value={formData.user_name}
                     onChange={handleChange}
+                    onFocus={handleFocus}
                   />
                   {errors.user_name && (
                     <p className="text-red-500 text-xs mt-1">
@@ -105,6 +112,7 @@ function GetInTouch() {
                     placeholder="Your Email"
                     value={formData.user_email}
                     onChange={handleChange}
+                    onFocus={handleFocus}
                   />
                   {errors.user_email && (
                     <p className="text-red-500 text-xs mt-1">
@@ -126,6 +134,7 @@ function GetInTouch() {
                     placeholder="Your Message"
                     value={formData.user_message}
                     onChange={handleChange}
+                    onFocus={handleFocus}
                   ></textarea>
                   {errors.user_message && (
                     <p className="text-red-500 text-xs mt-1">
@@ -137,15 +146,19 @@ function GetInTouch() {
             </div>
 
             {/* reCAPTCHA */}
-            <div className="mb-4 flex flex-col items-center">
-              <ReCAPTCHA
-                sitekey="6LcU8agqAAAAAJ0KwDWbzkEXYaLfoSs4ZmYDssei" // Replace with your valid site key
-                onChange={handleRecaptchaChange}
-              />
-              {errors.recaptcha && (
-                <p className="text-red-500 text-xs mt-1">{errors.recaptcha}</p>
-              )}
-            </div>
+            {showRecaptcha && (
+              <div className="mb-4 flex flex-col items-center">
+                <ReCAPTCHA
+                  sitekey="6LcU8agqAAAAAJ0KwDWbzkEXYaLfoSs4ZmYDssei"
+                  onChange={handleRecaptchaChange}
+                />
+                {errors.recaptcha && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.recaptcha}
+                  </p>
+                )}
+              </div>
+            )}
 
             <div className="flex justify-center text-center">
               <input
