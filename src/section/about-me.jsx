@@ -30,7 +30,7 @@ function About() {
       id="about-me"
       className="pt-24 pb-12"
       style={{
-        backgroundImage: "url('/src/images/bg-about.png')",
+        backgroundImage: "url('/images/bg-about.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

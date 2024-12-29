@@ -1,7 +1,4 @@
-import FacebookIcon from "./images/icon/facebook.png";
-import GithubIcon from "./images/icon/github.png";
-import LinkedInIcon from "./images/icon/linkedin.png";
-import EmailIcon from "./images/icon/email.png";
+import React, { useState } from "react";
 
 function Sidepanel() {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,7 +25,7 @@ function Sidepanel() {
           className="py-2"
         >
           <img
-            src={FacebookIcon}
+            src="/images/icon/facebook.png"
             alt="Facebook"
             className="h-8 w-8 hover:scale-110 transition-transform"
           />
@@ -42,7 +39,7 @@ function Sidepanel() {
           className="py-2"
         >
           <img
-            src={GithubIcon}
+            src="/images/icon/github.png"
             alt="Github"
             className="h-8 w-8 hover:scale-110 transition-transform"
           />
@@ -54,7 +51,7 @@ function Sidepanel() {
           className="py-2"
         >
           <img
-            src={LinkedInIcon}
+            src="/images/icon/linkedin.png"
             alt="LinkedIn"
             className="h-8 w-8 hover:scale-110 transition-transform"
           />
@@ -63,7 +60,7 @@ function Sidepanel() {
         {/* Email */}
         <a href="mailto:aranez.ruffa@gmail.com" className="py-2">
           <img
-            src={EmailIcon}
+            src="/images/icon/email.png"
             alt="Email"
             className="h-6 w-8 hover:scale-110 transition-transform"
           />

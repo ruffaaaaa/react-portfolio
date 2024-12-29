@@ -8,7 +8,7 @@ function Project() {
       description:
         "Lorem ipsum odor amet, consectetuer adipiscing elit. Velit aliquet urna tincidunt; nunc bibendum eget ac. Erat convallis viverra; nullam habitant consequat tempor euismod aliquam.",
       tools: ["React", "JavaScript", "CSS", "HTML"],
-      image: "/src/images/project/its-more-fun.png",
+      image: "/images/project/its-more-fun.png",
       link: "https://github.com/yourusername/project1",
     },
     {
@@ -16,7 +16,7 @@ function Project() {
       description:
         "Another project description goes here. This is a placeholder for the second project.",
       tools: ["Node.js", "Express", "MongoDB"],
-      image: "./images/project/facilities-reservation.png",
+      image: "/images/project/facilities-reservation.png",
       link: "https://github.com/yourusername/project2",
     },
   ];

@@ -25,7 +25,7 @@ function Navbar() {
           <div className="text-2xl font-bold flex items-center">
             <a href="#" className="flex items-center">
               <img
-                src="/src/images/ruffa-logo.png"
+                src="/images/ruffa-logo.png"
                 alt="Logo"
                 className="h-8 pr-1"
               />

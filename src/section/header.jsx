@@ -35,7 +35,7 @@ function Header() {
       <header
         className="header text-white py-[17.5rem] px-6 text-center animate-background fade-in"
         style={{
-          backgroundImage: "url('/src/images/bg-header.png')",
+          backgroundImage: "url('/images/bg-header.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           marginTop: "-4rem",
