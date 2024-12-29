@@ -36,7 +36,7 @@ function Navbar() {
           </div>
 
           {/* Hamburger Icon for Mobile */}
-          <div className="block lg:hidden" onClick={toggleMenu}>
+          <div className="justify-center text-center block lg:hidden" onClick={toggleMenu}>
             <button>
               <span className="block w-6 h-1 bg-white mb-1"></span>
               <span className="block w-6 h-1 bg-white mb-1"></span>
