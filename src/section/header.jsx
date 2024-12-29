@@ -45,7 +45,7 @@ function Header() {
         id="home"
       >
         <div className="max-w-6xl mx-auto">
-          <h1 className="font-jersey font-extrabold text-4xl lg:text-[90px] lg:mt-[4rem] mt-16">
+          <h1 className="font-jersey font-extrabold text-[35px] lg:text-[90px] lg:mt-[4rem] mt-16">
             Hi, I'm{" "}
             <span className="pl-2 uppercase underline text-[#3D9DC7]">
               {text}
