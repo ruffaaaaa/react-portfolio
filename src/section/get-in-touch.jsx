@@ -122,7 +122,7 @@ function GetInTouch() {
                 </div>
               </div>
 
-              <div className="lg:col-span-1 text-black lg:mt-0 -mt-6">
+              <div className="lg:col-span-1 text-black lg:mt-0 -mt-10">
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700">
                     Message
